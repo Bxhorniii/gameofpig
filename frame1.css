@@ -1,0 +1,206 @@
+*{
+    color: white;
+}
+
+body{
+    background-image: url(background.png);
+    width: 1440px;
+    height: 1024px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+
+.header_1{ 
+     display: inline-flex;
+     align-items: center;
+     width: 860px;
+}
+
+.pig_1{
+    border-radius: 58px;
+    height: 116px;
+    width: 116px;
+}
+
+.game_name{
+    width: 377px;
+    height: 64px;
+    flex-shrink: 0;
+    margin-left: 69px;
+    color: #FFF;
+    font-family: "Madimi One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+button{
+    background-color: #030060;
+    width: 116px;
+    height: 50px;
+    color: #FFF;
+    font-family: "Madimi One";
+    font-size: 15px;
+    border-radius: 50px;
+    margin-left: 66px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-color:#030060;
+}
+
+.main_2{
+    border-radius: 60px;
+    background: rgba(3, 0, 96, 0.75);
+    width: 830px;
+    height: 574px;
+    flex-shrink: 0; 
+    text-align: center;
+}
+.main_2_center{
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.score{
+    margin-top: 84px;
+    display:flex;
+    align-items: center;
+    height: 74px;
+}
+
+.text{
+    width: 393px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "Madimi One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#player1Score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 383px;
+    height: 73px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #FFF;
+    color: 1A0000;
+    font-family: "Madimi One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+
+
+#player2Score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 383px;
+    height: 73px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #FFF;
+    color: 1A0000;
+    font-family: "Madimi One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#diceImage{
+    margin-top:50px;
+    width: 84px; 
+    height: 84px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+
+.pig_2{
+    width: 147px;
+    height: 125px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+   border-radius: 50px;
+   margin-right: -17px;
+
+}
+
+
+.play{
+    display:flex;
+}
+
+#rollButton{
+    display: flex;
+width: 192px;
+height: 119px;
+background-color: 0000FF;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #FFF;
+text-align: center;
+font-family: Italianno;
+font-size: 80px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 66px;
+}
+
+#holdButton{
+    display: flex;
+width: 192px;
+height: 119px;
+background-color:FF0000;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #FFF;
+text-align: center;
+font-family: Italianno;
+font-size: 80px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.main_align{
+    display:flex;
+    justify-content: center;
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
