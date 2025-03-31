@@ -59,7 +59,7 @@ button{
 .main_2{
     border-radius: 60px;
     background: rgba(3, 0, 96, 0.75);
-    width: 830px;
+    width: 877px;
     height: 574px;
     flex-shrink: 0; 
     text-align: center;
@@ -201,6 +201,11 @@ line-height: normal;
     display:flex;
     flex-direction: column;
 }
+
+#diescore{
+    min-width: 200px;
+}
+
 
 
 
