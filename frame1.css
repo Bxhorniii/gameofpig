@@ -148,6 +148,7 @@ button{
 
 .play{
     display:flex;
+    justify-content: space-between;
 }
 
 #rollButton{
