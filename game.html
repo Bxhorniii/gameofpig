@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Pig Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css" type="text/css" title="style">  
+    <script src="game.js"></script> 
+</head>
+
+<body>
+    <header>       
+        <div class="header-left">
+            <img onclick="goHome()" class="logo" src="pig.png">
+            <h1 onclick="goHome()" class="game-name">The Game of Pig</h1>    
+        </div>
+        <div class="header-buttons">
+            <button class="buttonani" onclick="restartGame()">New Game</button>
+            <button class="buttonani" onclick="goTutorial()" style="background-color: #FF0000;">Tutorial</button>
+            <button class="buttonani" onclick="goHome()" >Home</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="game-box">
+            <div class="score-container">
+                <div class="score-box">
+                    <p class="score-label">Player 1 Score</p>
+                    <p id="player1Score">0</p>
+                    <meter id="player1Meter" min="0" max="100" value="0"></meter>
+                </div>
+
+                <div class="score-box">
+                    <p class="score-label">Player 2 Score</p> 
+                    <p id="player2Score">0</p>  
+                    <meter id="player2Meter" min="0" max="100" value="0"></meter>
+                </div>
+            </div>
+
+            <p id="dieScore">Player 1's turn. Roll the die!</p>
+            <img id="diceImage" src="dice.png">
+            <img class="pig-icon" src="pig.png">
+            <div class="controls">
+                <button  class="buttonani" id="rollButton" onclick="rollDice()">Roll</button>
+                <button  class="buttonani" id="holdButton" onclick="hold()">Hold</button>
+            </div>   
+            <div id="winnerMessage">
+                <p id="winnerText"></p>
+                <button onclick="restartGame()">Play Again</button>
+                <button onclick="goHome()">Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

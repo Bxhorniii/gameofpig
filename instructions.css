@@ -1,0 +1,159 @@
+* {
+    color: white;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: Georgia;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 58px;
+}
+
+.game-name {
+    font-family: "Madimi One";
+    font-size: 32px; 
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#play {
+    background: #FFF;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+}
+
+#tutorial {
+    background: #F00;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+button {
+    background-color: #030060;
+    width: 116px;
+    height: 50px;
+    font-family: "Madimi One";
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.main_align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 1255px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 28px; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.instructions {
+    color: #FFF;
+    font-size: 18px; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    color: #FFF;
+    font-size: 26px; 
+    font-style: normal;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: disc !important;
+}
+
+.list {
+    color: #FFF;
+    font-size: 16px; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: auto;
+}
+
+#roll {
+    background-color: #0000FF;
+    color: #FFF;
+    text-align: center;
+    font-family: Italianno;
+    font-size: 30px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 50px;
+}
+
+.guide {
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+}
+
+.guide_2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+#hold {
+    background-color: #FF0000;
+    color: #FFF;
+    text-align: center;
+    font-family: Italianno;
+    font-size: 30px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 150px;
+    border: none;
+}

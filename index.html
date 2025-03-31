@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>The Game of Pig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" type="text/css" title="style">   
+    <script src="game.js"></script> 
+</head>
+
+<body>
+    <header>       
+        <div class="header-left">
+            <img onclick="goHome()" class="logo" src="pig.png">
+            <h1 onclick="goHome()" class="game-name">The Game of Pig</h1>    
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h1>Welcome to</h1>
+            <h1 class="color">The Game of Pig</h1>
+            <p class="description">
+                Pig is a folk jeopardy dice game described by John Scarne in 1945, 
+                and was an ancestor of the modern game Pass the Pigs® (originally called PigMania®).
+            </p>    
+            <div class="buttons">
+                <button onclick="goGame()" id="play">Play</button> 
+                <button onclick="goTutorial()" id="tutorial">Tutorial</button>   
+            </div>
+        </div>
+
+        <div class="game-section">
+            <img class="game-image" src="game.png" alt="Game Preview">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 58px;
+}
+
+.game-name {
+    font-family: "Madimi One";
+    font-size: 32px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttonani {
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttonani:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+button {
+    background-color: #030060;
+    width: 116px;
+    height: 50px;
+    font-family: "Madimi One";
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-box {
+    background: rgba(3, 0, 96, 0.75);
+    border-radius: 50px;
+    width: 830px;
+    padding: 40px;
+    text-align: center;    
+    position: relative; 
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.score-box {
+    width: 45%;
+}
+
+.score-label {
+    font-family: "Madimi One";
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#player1Score, #player2Score {
+    background: white;
+    color: #1A0000;
+    font-family: "Madimi One";
+    font-size: 48px;
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+meter {
+    width: 100%;
+    height: 25px;
+}
+
+#diceImage {
+    width: 84px;
+    height: 84px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+#dieScore {
+    font-family: "Madimi One";
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 10px; 
+}
+
+.pig-icon {
+    width: 140px;
+    height: 125px;
+    border-radius: 50px;
+    position: absolute;
+    left: 0px; 
+    bottom: 0px; 
+}
+
+#rollButton, #holdButton {
+    width: 192px;
+    height: 119px;
+    font-family: Italianno;
+    font-size: 80px;
+    margin: 0 20px;
+}
+
+#rollButton {
+    background-color: #0000FF;
+}
+
+#holdButton {
+    background-color: #FF0000;
+}
+
+#winnerMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 100;
+    border: 3px solid white;
+    font-family: "Madimi One";
+    font-size: 36px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    width: 400px; 
+}
+
+#winnerText {
+    margin-bottom: 30px;
+    font-size: 48px;
+}
+
+#winnerMessage button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 50px;
+    margin: 10px;
+    font-family: "Madimi One";
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 160px;
+    white-space: nowrap; 
+    display: inline-block;
+}
+
+#winnerMessage button:hover {
+    background-color: black;
+}
