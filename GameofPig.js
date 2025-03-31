@@ -54,26 +54,18 @@ function rollDice() {
     switchTurn();
   } else {
     if (isPlayer1Turn) {
-      // Check if adding the die would exceed 100
-      if (player1Score + player1Round + die > WIN_SCORE) {
-        return; // Don't add the roll if it would exceed 100
-      }
       player1Round += die;
-      // Check if exactly 100 is reached
-      if (player1Score + player1Round === WIN_SCORE) {
+      // Win if score reaches or exceeds 100
+      if (player1Score + player1Round >= WIN_SCORE) {
         player1Score += player1Round;
         updateScore();
         checkWin();
         return;
       }
     } else {
-      // Check if adding the die would exceed 100
-      if (player2Score + player2Round + die > WIN_SCORE) {
-        return; // Don't add the roll if it would exceed 100
-      }
       player2Round += die;
-      // Check if exactly 100 is reached
-      if (player2Score + player2Round === WIN_SCORE) {
+      // Win if score reaches or exceeds 100
+      if (player2Score + player2Round >= WIN_SCORE) {
         player2Score += player2Round;
         updateScore();
         checkWin();
@@ -113,12 +105,26 @@ function switchTurn() {
 
 function checkWin() {
   if (player1Score >= WIN_SCORE) {
-    document.getElementById("winnerMessage").textContent = "🎉 Player 1 Wins! 🎉";
+    // Remove the inline winner message
+    document.getElementById("winnerMessage").textContent = "";
     disableButtons();
+    // Show popup with options
+    if (confirm("Player 1 Wins!\n\nWould you like to play again?\n\nClick 'OK' to restart game\nClick 'Cancel' to return to home page")) {
+      restartGame();
+    } else {
+      window.location.href = "index.html";
+    }
     return true;
   } else if (player2Score >= WIN_SCORE) {
-    document.getElementById("winnerMessage").textContent = "🎉 Player 2 Wins! 🎉";
+    // Remove the inline winner message
+    document.getElementById("winnerMessage").textContent = "";
     disableButtons();
+    // Show popup with options
+    if (confirm("Player 2 Wins!\n\nWould you like to play again?\n\nClick 'OK' to restart game\nClick 'Cancel' to return to home page")) {
+      restartGame();
+    } else {
+      window.location.href = "index.html";
+    }
     return true;
   }
   return false;
