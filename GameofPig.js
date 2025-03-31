@@ -8,26 +8,33 @@ function rollDie() {
 }
 
 function updateScore() {
-  document.getElementById("player1Score").textContent = player1Score;
-  document.getElementById("player2Score").textContent = player2Score;
+  // Cap the displayed scores at 100
+  document.getElementById("player1Score").textContent = Math.min(player1Score, WIN_SCORE);
+  document.getElementById("player2Score").textContent = Math.min(player2Score, WIN_SCORE);
 
-  // Update the progress bar to reflect current score out of 100
-  document.getElementById("player1Meter").value = player1Score;
-  document.getElementById("player2Meter").value = player2Score;
+  // Cap the meter values at 100
+  document.getElementById("player1Meter").value = Math.min(player1Score, WIN_SCORE);
+  document.getElementById("player2Meter").value = Math.min(player2Score, WIN_SCORE);
 }
 
 function updateTempScore() {
   if (isPlayer1Turn) {
-    document.getElementById("player1Score").textContent = player1Score + player1Round;
+    // Cap the displayed score at 100
+    let displayScore = Math.min(player1Score + player1Round, WIN_SCORE);
+    document.getElementById("player1Score").textContent = displayScore;
     document.getElementById("player2Score").textContent = player2Score;
+    // Cap the meter value at 100
+    document.getElementById("player1Meter").value = displayScore;
+    document.getElementById("player2Meter").value = player2Score;
   } else {
-    document.getElementById("player2Score").textContent = player2Score + player2Round;
+    // Cap the displayed score at 100
+    let displayScore = Math.min(player2Score + player2Round, WIN_SCORE);
+    document.getElementById("player2Score").textContent = displayScore;
     document.getElementById("player1Score").textContent = player1Score;
+    // Cap the meter value at 100
+    document.getElementById("player2Meter").value = displayScore;
+    document.getElementById("player1Meter").value = player1Score;
   }
-
-  // Update the progress bar while rolling
-  document.getElementById("player1Meter").value = player1Score + player1Round;
-  document.getElementById("player2Meter").value = player2Score + player2Round;
 }
 
 function rollDice() {
@@ -47,14 +54,36 @@ function rollDice() {
     switchTurn();
   } else {
     if (isPlayer1Turn) {
+      // Check if adding the die would exceed 100
+      if (player1Score + player1Round + die > WIN_SCORE) {
+        return; // Don't add the roll if it would exceed 100
+      }
       player1Round += die;
+      // Check if exactly 100 is reached
+      if (player1Score + player1Round === WIN_SCORE) {
+        player1Score += player1Round;
+        updateScore();
+        checkWin();
+        return;
+      }
     } else {
+      // Check if adding the die would exceed 100
+      if (player2Score + player2Round + die > WIN_SCORE) {
+        return; // Don't add the roll if it would exceed 100
+      }
       player2Round += die;
+      // Check if exactly 100 is reached
+      if (player2Score + player2Round === WIN_SCORE) {
+        player2Score += player2Round;
+        updateScore();
+        checkWin();
+        return;
+      }
     }
   }
 
   updateTempScore();
-  checkWin();  // Check for winner after every roll
+  checkWin();
 }
 
 function hold() {
@@ -63,15 +92,16 @@ function hold() {
   if (isPlayer1Turn) {
     player1Score += player1Round;
     player1Round = 0;
+    updateScore();
+    if (checkWin()) return;  // Ensure game ends if score reaches 100
   } else {
     player2Score += player2Round;
     player2Round = 0;
+    updateScore();
+    if (checkWin()) return;  // Ensure game ends if score reaches 100
   }
 
-  updateScore();
-  if (!checkWin()) {
-    switchTurn();
-  }
+  switchTurn();
 }
 
 function switchTurn() {
